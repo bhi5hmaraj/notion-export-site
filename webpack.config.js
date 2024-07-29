@@ -73,7 +73,7 @@ module.exports = {
       patterns: [
         { 
           from: 'src',
-          to: 'dist',
+          to: '',
           globOptions: {
             ignore: ['**/*.js', '**/*.html'],
           },

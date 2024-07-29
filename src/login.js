@@ -1,6 +1,14 @@
 
-import { analytics, auth } from './init.js'
+import { analytics, auth, app } from './init.js'
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
+import { getFirestore, collection, addDoc, getDocs, query, where, doc } from "firebase/firestore";
+
+// Get a reference to the Firestore database
+// Initialize Firebase
+
+
+const db = getFirestore(app);
+
 
 const submitButton = document.getElementById("submit");
 // const signupButton = document.getElementById("sign-up");
@@ -116,6 +124,29 @@ var email, password, signupEmail, signupPassword, confirmSignupEmail, confirmSig
 // ---
 
 
+// Example: Search for a user by email
+async function findUserByEmail(email) {
+  console.log('finding by email');
+  const usersCollectionRef = collection(db, '/users');
+  console.log("collection " + JSON.stringify(usersCollectionRef));
+  const q = query(usersCollectionRef, where('email', '==', email));
+  console.log('query ' + JSON.stringify(q));
+  const querySnapshot = await getDocs(q);
+  console.log('query snap ' + JSON.stringify(querySnapshot));
+  if (querySnapshot.empty) {
+    console.log('No matching documents.');
+    return null;
+  }
+
+  const userDoc = querySnapshot.docs[0];
+  const userData = userDoc.data();
+  console.log('Found user:', userData);
+  return userData;
+}
+
+// Example usage:
+// findUserByEmail('john.doe@example.com');
+
 
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 const provider = new GoogleAuthProvider();
@@ -131,15 +162,34 @@ submitButton.addEventListener("click", function () {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.
-      const user = result.user;
+      const user = result.user.providerData[0];
       // IdP data available using getAdditionalUserInfo(result)
-      user.providerData.forEach((profile) => {
-        console.log("Sign-in provider: " + profile.providerId);
-        console.log("  Provider-specific UID: " + profile.uid);
-        console.log("  Name: " + profile.displayName);
-        console.log("  Email: " + profile.email);
-        console.log("  Photo URL: " + profile.photoURL);
-      });
+      console.log("Sign-in provider: " + user.providerId);
+      console.log("  Provider-specific UID: " + user.uid);
+      console.log("  Name: " + user.displayName);
+      console.log("  Email: " + user.email);
+      console.log("  Photo URL: " + user.photoURL);
+
+      if (!findUserByEmail(user.email)) {
+        // New user
+        // Create a new document with data
+        const newUserData = {
+          email: user.email,
+          name: user.displayName
+        };
+
+        // Add the document to the collection
+        addDoc(usersCollectionRef, newUserData)
+          .then((docRef) => {
+            console.log('Document written with ID: ', docRef.id);
+          })
+          .catch((error) => {
+            console.error('Error adding document: ', error);
+          });
+
+      }
+
+
       window.location.replace('/homepage.html');
       // ...
     }).catch((error) => {
