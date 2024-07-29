@@ -1,0 +1,101 @@
+[debug] [2024-07-27T16:42:58.873Z] ----------------------------------------------------------------------
+[debug] [2024-07-27T16:42:58.874Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-07-27T16:42:58.874Z] CLI Version:   13.14.2
+[debug] [2024-07-27T16:42:58.874Z] Platform:      linux
+[debug] [2024-07-27T16:42:58.874Z] Node Version:  v20.5.1
+[debug] [2024-07-27T16:42:58.874Z] Time:          Sat Jul 27 2024 22:12:58 GMT+0530 (India Standard Time)
+[debug] [2024-07-27T16:42:58.874Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-27T16:42:58.876Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-27T16:42:58.877Z] > authorizing via signed-in user (matib275@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/bhishma/Documents/software/notion-export-site
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-27T16:43:14.416Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-27T16:43:14.416Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"notion-notes-2024","name":"notion-notes-2024"}
+[debug] [2024-07-27T16:43:15.736Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-07-27T16:43:15.736Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-07-27T16:43:15.737Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID notion-notes-2024. Please try again with a unique project ID.
+[debug] [2024-07-27T16:43:35.119Z] ----------------------------------------------------------------------
+[debug] [2024-07-27T16:43:35.120Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-07-27T16:43:35.120Z] CLI Version:   13.14.2
+[debug] [2024-07-27T16:43:35.120Z] Platform:      linux
+[debug] [2024-07-27T16:43:35.120Z] Node Version:  v20.5.1
+[debug] [2024-07-27T16:43:35.120Z] Time:          Sat Jul 27 2024 22:13:35 GMT+0530 (India Standard Time)
+[debug] [2024-07-27T16:43:35.120Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-27T16:43:35.123Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-27T16:43:35.123Z] > authorizing via signed-in user (matib275@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/bhishma/Documents/software/notion-export-site
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-27T16:43:49.484Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-27T16:43:49.484Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"notion-notes-1724","name":"notion-notes-1724"}
+[debug] [2024-07-27T16:43:51.891Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-27T16:43:51.891Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6823468392042359139"}
+[debug] [2024-07-27T16:43:51.891Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 [none]
+[debug] [2024-07-27T16:43:53.455Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 200
+[debug] [2024-07-27T16:43:53.456Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 {"name":"operations/cp.6823468392042359139"}
+[debug] [2024-07-27T16:43:53.957Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-07-27T16:43:53.958Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 [none]
+[debug] [2024-07-27T16:43:54.529Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 200
+[debug] [2024-07-27T16:43:54.530Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 {"name":"operations/cp.6823468392042359139","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2024-07-27T16:43:55.529Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-07-27T16:43:55.530Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 [none]
+[debug] [2024-07-27T16:43:56.104Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 200
+[debug] [2024-07-27T16:43:56.104Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6823468392042359139 {"name":"operations/cp.6823468392042359139","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"550820319144","projectId":"notion-notes-1724","lifecycleState":"ACTIVE","name":"notion-notes-1724","createTime":"2024-07-27T16:43:53.916111Z"}}
+[debug] [2024-07-27T16:43:56.106Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/notion-notes-1724:addFirebase [none]
+[debug] [2024-07-27T16:43:57.354Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/notion-notes-1724:addFirebase 403
+[debug] [2024-07-27T16:43:57.354Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/notion-notes-1724:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-07-27T16:43:57.355Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-07-27T16:43:57.358Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

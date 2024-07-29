@@ -1,0 +1,1375 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>IPR - II</title>
+        <style>
+            /* cspell:disable-file */
+            /* webkit printing magic: print all background colors */
+            html {
+                -webkit-print-color-adjust: exact;
+            }
+            * {
+                box-sizing: border-box;
+                -webkit-print-color-adjust: exact;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            @media only screen {
+                body {
+                    margin: 2em auto;
+                    max-width: 900px;
+                    color: rgb(55, 53, 47);
+                }
+            }
+
+            body {
+                line-height: 1.5;
+                white-space: pre-wrap;
+            }
+
+            a,
+            a.visited {
+                color: inherit;
+                text-decoration: underline;
+            }
+
+            .pdf-relative-link-path {
+                font-size: 80%;
+                color: #444;
+            }
+
+            h1,
+            h2,
+            h3 {
+                letter-spacing: -0.01em;
+                line-height: 1.2;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 0.75em;
+            }
+
+            h1 {
+                font-size: 1.875rem;
+                margin-top: 1.875rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                margin-top: 1.25rem;
+            }
+
+            .source {
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                padding: 1.5em;
+                word-break: break-all;
+            }
+
+            .callout {
+                border-radius: 3px;
+                padding: 1rem;
+            }
+
+            figure {
+                margin: 1.25em 0;
+                page-break-inside: avoid;
+            }
+
+            figcaption {
+                opacity: 0.5;
+                font-size: 85%;
+                margin-top: 0.5em;
+            }
+
+            mark {
+                background-color: transparent;
+            }
+
+            .indented {
+                padding-left: 1.5em;
+            }
+
+            hr {
+                background: transparent;
+                display: block;
+                width: 100%;
+                height: 1px;
+                visibility: visible;
+                border: none;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            @media only print {
+                img {
+                    max-height: 100vh;
+                    object-fit: contain;
+                }
+            }
+
+            @page {
+                margin: 1in;
+            }
+
+            .collection-content {
+                font-size: 0.875rem;
+            }
+
+            .column-list {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .column {
+                padding: 0 1em;
+            }
+
+            .column:first-child {
+                padding-left: 0;
+            }
+
+            .column:last-child {
+                padding-right: 0;
+            }
+
+            .table_of_contents-item {
+                display: block;
+                font-size: 0.875rem;
+                line-height: 1.3;
+                padding: 0.125rem;
+            }
+
+            .table_of_contents-indent-1 {
+                margin-left: 1.5rem;
+            }
+
+            .table_of_contents-indent-2 {
+                margin-left: 3rem;
+            }
+
+            .table_of_contents-indent-3 {
+                margin-left: 4.5rem;
+            }
+
+            .table_of_contents-link {
+                text-decoration: none;
+                opacity: 0.7;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid rgba(55, 53, 47, 0.09);
+                border-collapse: collapse;
+            }
+
+            table {
+                border-left: none;
+                border-right: none;
+            }
+
+            th,
+            td {
+                font-weight: normal;
+                padding: 0.25em 0.5em;
+                line-height: 1.5;
+                min-height: 1.5em;
+                text-align: left;
+            }
+
+            th {
+                color: rgba(55, 53, 47, 0.6);
+            }
+
+            ol,
+            ul {
+                margin: 0;
+                margin-block-start: 0.6em;
+                margin-block-end: 0.6em;
+            }
+
+            li > ol:first-child,
+            li > ul:first-child {
+                margin-block-start: 0.6em;
+            }
+
+            ul > li {
+                list-style: disc;
+            }
+
+            ul.to-do-list {
+                padding-inline-start: 0;
+            }
+
+            ul.to-do-list > li {
+                list-style: none;
+            }
+
+            .to-do-children-checked {
+                text-decoration: line-through;
+                opacity: 0.375;
+            }
+
+            ul.toggle > li {
+                list-style: none;
+            }
+
+            ul {
+                padding-inline-start: 1.7em;
+            }
+
+            ul > li {
+                padding-left: 0.1em;
+            }
+
+            ol {
+                padding-inline-start: 1.6em;
+            }
+
+            ol > li {
+                padding-left: 0.2em;
+            }
+
+            .mono ol {
+                padding-inline-start: 2em;
+            }
+
+            .mono ol > li {
+                text-indent: -0.4em;
+            }
+
+            .toggle {
+                padding-inline-start: 0em;
+                list-style-type: none;
+            }
+
+            /* Indent toggle children */
+            .toggle > li > details {
+                padding-left: 1.7em;
+            }
+
+            .toggle > li > details > summary {
+                margin-left: -1.1em;
+            }
+
+            .selected-value {
+                display: inline-block;
+                padding: 0 0.5em;
+                background: rgba(206, 205, 202, 0.5);
+                border-radius: 3px;
+                margin-right: 0.5em;
+                margin-top: 0.3em;
+                margin-bottom: 0.3em;
+                white-space: nowrap;
+            }
+
+            .collection-title {
+                display: inline-block;
+                margin-right: 1em;
+            }
+
+            .page-description {
+                margin-bottom: 2em;
+            }
+
+            .simple-table {
+                margin-top: 1em;
+                font-size: 0.875rem;
+                empty-cells: show;
+            }
+            .simple-table td {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table th {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table-header-color {
+                background: rgb(247, 246, 243);
+                color: black;
+            }
+            .simple-table-header {
+                font-weight: 500;
+            }
+
+            time {
+                opacity: 0.5;
+            }
+
+            .icon {
+                display: inline-block;
+                max-width: 1.2em;
+                max-height: 1.2em;
+                text-decoration: none;
+                vertical-align: text-bottom;
+                margin-right: 0.5em;
+            }
+
+            img.icon {
+                border-radius: 3px;
+            }
+
+            .user-icon {
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 100%;
+                margin-right: 0.5rem;
+            }
+
+            .user-icon-inner {
+                font-size: 0.8em;
+            }
+
+            .text-icon {
+                border: 1px solid #000;
+                text-align: center;
+            }
+
+            .page-cover-image {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                max-height: 30vh;
+            }
+
+            .page-header-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .page-header-icon-with-cover {
+                margin-top: -0.72em;
+                margin-left: 0.07em;
+            }
+
+            .page-header-icon img {
+                border-radius: 3px;
+            }
+
+            .link-to-page {
+                margin: 1em 0;
+                padding: 0;
+                border: none;
+                font-weight: 500;
+            }
+
+            p > .user {
+                opacity: 0.5;
+            }
+
+            td > .user,
+            td > time {
+                white-space: nowrap;
+            }
+
+            input[type="checkbox"] {
+                transform: scale(1.5);
+                margin-right: 0.6em;
+                vertical-align: middle;
+            }
+
+            p {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
+            .image {
+                border: none;
+                margin: 1.5em 0;
+                padding: 0;
+                border-radius: 0;
+                text-align: center;
+            }
+
+            .code,
+            code {
+                background: rgba(135, 131, 120, 0.15);
+                border-radius: 3px;
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+                font-size: 85%;
+                tab-size: 2;
+            }
+
+            code {
+                color: #eb5757;
+            }
+
+            .code {
+                padding: 1.5em 1em;
+            }
+
+            .code-wrap {
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+
+            .code > code {
+                background: none;
+                padding: 0;
+                font-size: 100%;
+                color: inherit;
+            }
+
+            blockquote {
+                font-size: 1.25em;
+                margin: 1em 0;
+                padding-left: 1em;
+                border-left: 3px solid rgb(55, 53, 47);
+            }
+
+            .bookmark {
+                text-decoration: none;
+                max-height: 8em;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .bookmark-title {
+                font-size: 0.85em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 1.75em;
+                white-space: nowrap;
+            }
+
+            .bookmark-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bookmark-info {
+                flex: 4 1 180px;
+                padding: 12px 14px 14px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .bookmark-image {
+                width: 33%;
+                flex: 1 1 180px;
+                display: block;
+                position: relative;
+                object-fit: cover;
+                border-radius: 1px;
+            }
+
+            .bookmark-description {
+                color: rgba(55, 53, 47, 0.6);
+                font-size: 0.75em;
+                overflow: hidden;
+                max-height: 4.5em;
+                word-break: break-word;
+            }
+
+            .bookmark-href {
+                font-size: 0.75em;
+                margin-top: 0.25em;
+            }
+
+            .sans {
+                font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial,
+                    sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .code {
+                font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+            }
+            .serif {
+                font-family: Lyon-Text, Georgia, ui-serif, serif;
+            }
+            .mono {
+                font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+            }
+            .pdf .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK JP";
+            }
+            .pdf:lang(zh-CN) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK SC";
+            }
+            .pdf:lang(zh-TW) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK TC";
+            }
+            .pdf:lang(ko-KR) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK KR";
+            }
+            .pdf .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK KR";
+            }
+            .pdf .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK JP";
+            }
+            .pdf:lang(zh-CN) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK SC";
+            }
+            .pdf:lang(zh-TW) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK TC";
+            }
+            .pdf:lang(ko-KR) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK KR";
+            }
+            .pdf .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK KR";
+            }
+            .highlight-default {
+                color: rgba(55, 53, 47, 1);
+            }
+            .highlight-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .highlight-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .highlight-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .highlight-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .highlight-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .highlight-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .highlight-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .highlight-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .highlight-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .highlight-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .highlight-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .highlight-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .highlight-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .highlight-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .highlight-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .highlight-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .highlight-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .highlight-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .block-color-default {
+                color: inherit;
+                fill: inherit;
+            }
+            .block-color-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .block-color-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .block-color-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .block-color-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .block-color-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .block-color-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .block-color-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .block-color-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .block-color-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .block-color-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .block-color-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .block-color-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .block-color-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .block-color-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .block-color-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .block-color-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .block-color-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .block-color-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .select-value-color-uiBlue {
+                background-color: rgba(35, 131, 226, 0.07);
+            }
+            .select-value-color-pink {
+                background-color: rgba(245, 224, 233, 1);
+            }
+            .select-value-color-purple {
+                background-color: rgba(232, 222, 238, 1);
+            }
+            .select-value-color-green {
+                background-color: rgba(219, 237, 219, 1);
+            }
+            .select-value-color-gray {
+                background-color: rgba(227, 226, 224, 1);
+            }
+            .select-value-color-transparentGray {
+                background-color: rgba(227, 226, 224, 0);
+            }
+            .select-value-color-translucentGray {
+                background-color: rgba(0, 0, 0, 0.06);
+            }
+            .select-value-color-orange {
+                background-color: rgba(250, 222, 201, 1);
+            }
+            .select-value-color-brown {
+                background-color: rgba(238, 224, 218, 1);
+            }
+            .select-value-color-red {
+                background-color: rgba(255, 226, 221, 1);
+            }
+            .select-value-color-yellow {
+                background-color: rgba(253, 236, 200, 1);
+            }
+            .select-value-color-blue {
+                background-color: rgba(211, 229, 239, 1);
+            }
+            .select-value-color-pageGlass {
+                background-color: undefined;
+            }
+            .select-value-color-washGlass {
+                background-color: undefined;
+            }
+
+            .checkbox {
+                display: inline-flex;
+                vertical-align: text-bottom;
+                width: 16;
+                height: 16;
+                background-size: 16px;
+                margin-left: 2px;
+                margin-right: 5px;
+            }
+
+            .checkbox-on {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+
+            .checkbox-off {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+
+            /* -------- notionBackup injection -------- */
+
+            body {
+                white-space: normal !important;
+            }
+
+            p {
+                min-height: 1em !important;
+            }
+
+            .code,
+            code {
+                font-size: 100% !important;
+            }
+
+            blockquote {
+                font-size: 100% !important;
+            }
+
+            .callout {
+                white-space: normal !important;
+            }
+            .callout div:has(span.icon) {
+                font-size: 100% !important;
+            }
+
+            .source:not(.bookmark) {
+                font-size: 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+        <article class="page sans">
+            <header>
+                <img
+                    class="page-cover-image"
+                    src="cache/photo-1589287707312-213624549c8801e40b5b-f9bb-40a5-afcc-ea74b0bb20e6"
+                    style="object-position: center 50%" />
+                <div class="page-header-icon page-header-icon-with-cover">
+                    <img class="icon" src="cache/square-dashed_gray30538be2-8fdd-4e54-b99c-22f55c7c96ec.svg" />
+                </div>
+                <h1 class="page-title">IPR - II</h1>
+                <p class="page-description"></p>
+                <table class="properties">
+                    <tbody>
+                        <tr class="property-row property-row-file">
+                            <th>
+                                <span class="icon property-icon">
+                                    <svg
+                                        role="graphics-symbol"
+                                        viewBox="0 0 16 16"
+                                        style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0"
+                                        class="typesFile">
+                                        <path
+                                            d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path>
+                                    </svg>
+                                </span>
+                                Syllabus
+                            </th>
+                            <td>
+                                <span style="margin-right: 6px"><a href="IPR%20-%20II%20333d90dd54e34d6798a265f971b8cbf1/IPR-II.pdf">IPR-II.pdf</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </header>
+            <div class="page-body">
+                <h1>UNIT I - Indian Copyright Law</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>works in which copyright subsists</strong></mark>
+                        and in which copyright
+                        <mark class="highlight-red"><strong>does not subsist</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>6x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        What is infringement of copyright ? What acts
+                        <mark class="highlight-red"><strong>do not amount to infringement</strong></mark>
+                        of copyright ?
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        What constitutes infringement ? What are the
+                        <mark class="highlight-red"><strong>remedies</strong></mark>
+                        available for infringement ? Explain.
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>modes of Assignment</strong></mark>
+                        of copy right under Copy Right Law.
+                        <strong><mark class="highlight-red">2x</mark></strong>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Describe the various
+                        <mark class="highlight-red"><strong>modes of transfer</strong></mark>
+                        of copyright.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Describe the various
+                        <mark class="highlight-red"><strong>rights of owner</strong></mark>
+                        of Copyright.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        'lntellectual property rights protect the novelty in the products of human intellect in whatever field of human activity and endeavour'.
+                        Elucidate.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>"Copy right exists in expression of idea and not in idea it self" Elucidate.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="9">
+                    <li>
+                        What is copyright ? Explain the
+                        <mark class="highlight-red"><strong>salient features of Copyright Act</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="10">
+                    <li>
+                        Write briefly the
+                        <mark class="highlight-red"><strong>origin and development</strong></mark>
+                        of copyrights.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="11">
+                    <li>What are the characteristics of copyright ? Explain.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="12">
+                    <li>Explain the scope of literacy work with illustrations.</li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Computer software and copyright.
+                        <strong><mark class="highlight-red">2x</mark></strong>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Write a note on termination of licence of copyright.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>State the procedure for assignment of copyright.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Cinematographic work.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>Copyright Societies.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>Performers rights.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>Copyright Board.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>Literary works.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        A work of fiction is written by 'X', 'Y' reads the work and author work carrying 10 chapters of the previous book which have been
+                        paraphrased by him though marginally. Whether 'Y' has infringed the right's ol'X' ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        'A' had borrowed a part of speech which was only of two-and-half minutes duration in a three hour film. State whether A's act amounts to
+                        infringement.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>'A'writes a book. Can he be compelled to obtain copyright over it ?</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>'Z' has developed a new computer software programme. He wants to obtain protection for it. Advise him.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Three photographers took photo of statue of Mahatma Gandhi situated at a circle in a town. Now the photographers claim copyright over
+                        the photos. Can they claim ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Balaraj and company obtains copyright on pictorial representation of Lord Balasubrahmanya in a human form. Canaiah and Company
+                        challenges it before the coufi on the ground that it lacks originality. Decide.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        'M', conducts a research study on the heaith conditions of rural children. During a debate on the programme for improvement of health
+                        conditions of rural children, M’s research report is circulated in Loksabha. The circulation is made without the permission of the
+                        author. Can M bring legal action against it ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>
+                        A teacher who is a paper setter for the examination' picks up an extract from “Malgudidays"' a popular short stories collection authored
+                        by R.K. Narayan and asks questions based on the extract in the English question paper set by him. Can the legal heirs of "R' K' Narayan
+                        bring an action against tne paplr setter for infringement of copy right ? Decide'
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="9">
+                    <li>
+                        A work of fiction is written by ‘A’. B reads the book and authors a work carrying 10 chapters of the book written by A which he has
+                        paraphrased through marginally. Whether B has infringed the rights of A?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="10">
+                    <li>
+                        Ashok a Ph.D. scholar referred a book "Science and LaW' written by Chandrashen and copied 50 pages from it. Now Chandrashen wants to
+                        take action against Ashok. Advice him.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="11">
+                    <li>
+                        A, a Private Limited Company, is publishing a daily newspaper and B has agreed to write an article every week for Rs. 1,000 per article.
+                        Who is the first owner of this article between A and B?Decide.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="12">
+                    <li>
+                        A is a music composer, B is a singer, C is a writer and D is a producer of a film. D asks A, B and C to prepare 6 songs to be recorded
+                        in his film and pays the remuneration as per their demand to all of them. Who is the owner of these six songs ? Decide.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="13">
+                    <li>
+                        A drama was playing'in an auditorium. Some of the selected audience were invited by open ticket. lt included directors and producers who
+                        came there to watch the play as the final product of their efforts. ls copyright subsists in drama ?
+                    </li>
+                </ol>
+                <hr />
+                <h1>UNIT II - Biological Diversity Law</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>constitution, powers and functions</strong></mark>
+                        of Bio-diversity authority.
+                        <mark class="highlight-red"><strong>6x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>meaning, scope and features</strong></mark>
+                        of Biological Diversity Act, 2002.
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        State the important f
+                        <mark class="highlight-red"><strong>eatures of Convention of Biological Diversity</strong></mark>
+                        (CBD) 1961.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        Discuss the
+                        <mark class="highlight-red"><strong>rights and duties of contracting parties</strong></mark>
+                        in making use of genetic resources under the convention of bio-diversity.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>duties of the Central and State Governments</strong></mark>
+                        in the conservation of Biological Diversity ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        who is a benefit claimer ? How can
+                        <mark class="highlight-red"><strong>benefit-sharing be given effect</strong></mark>
+                        to under Bio-diversity Act, 2002 ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>objectives</strong></mark>
+                        of convention on Bio-diversity (CBD).
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        National Gene Fund.
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        State Bio-diversity Board.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Bio piracy.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Enumerate the issues of biological diversity.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>Biodiversity managing committee.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>National Biodiversity Authority.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>Convention on bio-diversity.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>Benefit sharing</li>
+                </ol>
+                <hr />
+                <h1>UNIT III - Plant Varieties &amp; Farmers Rights Law</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>procedure for registration</strong></mark>
+                        of plant varieties underthe Protection of Plant Varieties and Farmer's Hight Act, 2001.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        what are the
+                        <mark class="highlight-red"><strong>powers and functions</strong></mark>
+                        of protection,of plant Varieties and Farmers' Rights Authority ?
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Define the term '
+                        <mark class="highlight-red"><strong>farmer</strong></mark>
+                        '. Explain
+                        <mark class="highlight-red"><strong>objects</strong></mark>
+                        of the Protection of Plant Varieties and Farmers' Rights Act, 2001.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>protection available</strong></mark>
+                        for Plant Varieties and Farmers Rights? Explain.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>remedies</strong></mark>
+                        against infringement of Plant Varieties and Farmer's Rights.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Discuss plant
+                        <mark class="highlight-red"><strong>breeder's, researcher's and community rights</strong></mark>
+                        . State the exceptions.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        lndia has adopted
+                        <mark class="highlight-red"><strong>sui generis system</strong></mark>
+                        for protection of plant and plant varieties. Elucidate.
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>Explain the procedure for registration of Plant Varieties.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Write a note on compulsory licence of plant varieties.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Farmers’ rights.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        An agent of the registered plant variety wants to institute legal proceeding for infringement in his own name as if he were the breeder.
+                        Will he succeed ? 2x
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        The Registrar appointed under Protection of Plant Varieties and Farmers' Rights Act refuses an application forcorrection of the register
+                        being submitted by the registered breeder of the plant
+                        <br />
+                        variety in oral form. Can such refusal be challenged ?
+                        <br />
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        A person obtains compulsory licence regarding a registered plant variety, but the breeder fails to provide necessary seeds to the person
+                        who obtained the compulsory licence. Decide. Give reasons.
+                    </li>
+                </ol>
+                <h1>UNIT IV - Designs Law</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        What is an Industrial design? Explain the
+                        <mark class="highlight-red"><strong>conditions and procedure</strong></mark>
+                        <mark class="highlight-red"><strong>for registration</strong></mark>
+                        of designs.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>salient features</strong></mark>
+                        of the Designs Act, 1911.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Define the term 'design'. what are the
+                        <mark class="highlight-red"><strong>prohibitions</strong></mark>
+                        imposable on registration of design ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        What
+                        <mark class="highlight-red"><strong>remedies</strong></mark>
+                        are available against the piracy of copyright design ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Narrate the
+                        <mark class="highlight-red"><strong>powers and duties</strong></mark>
+                        of the controller of designs.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Explain '
+                        <mark class="highlight-red"><strong>Design</strong></mark>
+                        ' and '
+                        <mark class="highlight-red"><strong>Functional Design</strong></mark>
+                        ' with their essentials.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Briefly discuss the
+                        <mark class="highlight-red"><strong>difference</strong></mark>
+                        between Design and Trade Mark.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>essential characteristics</strong></mark>
+                        of an industrial design ?
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>What are the legal remedies available for infringement of a registered design ?</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>What is the procedure of registration of a design ?</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Cancellation of design.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Significance of design.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        One company manufactured globes mounted on wooden frame, the other manufactures globes mounted on gold frames, the structures of the
+                        mount remaining the same. The second company claims a copyright in the design asserting the novelty and originality of the gold frame.
+                        Can the company get a copyright in such a design ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>'X'has registered a design under the design Act, 2000. Can he also avail protection under the Copyright Act ? Advice him.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        A company in USA designs a shoe and wants to register the design in lndia. But similar designed shoe has already been sold in lndia.
+                        Advise the company.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        An architect creates a design for multi-stored building. A contractor, who constructed the building, claims copyright on the design. Can
+                        he claim ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        ln a designing firm, P creates a design and Q fills the design with colour. P and Q claim copyright individually over it. Will they
+                        succeed.?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        The plaintiff and the defendant are engaged in selling of coconut oil using plastic bottle. The plaintiff seeks injunction before the
+                        coutt against the defendant for using of similar cap with movable lid and a hinge on the bottle as that of plaintiff's bottle. Against
+                        it, the defendant contends that the cap alone does not stand as an article for sale nor can it be described as a part of an article.
+                        Decide.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        A Carpenter designs wooden furniture for sale at commercial sale, later files an infringement suit against a neighbouring carpenter who
+                        sells similar furniture pleading copyright violations. can his work be called a artistic work and will his claims is succeed.
+                    </li>
+                </ol>
+                <hr />
+                <h1>UNIT V - International Treaties, Conventions &amp; TRIPS</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Explain the salient features of
+                        <mark class="highlight-red"><strong>Paris Convention</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>objectives</strong></mark>
+                        of
+                        <mark class="highlight-red"><strong>TRIPS</strong></mark>
+                        agreement.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Explain the object of '
+                        <mark class="highlight-red"><strong>Berne Convention</strong></mark>
+                        '.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        Enumerate the objectives of
+                        <mark class="highlight-red"><strong>convention on Bio-diversity</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Examine the
+                        <mark class="highlight-red"><strong>salient features</strong></mark>
+                        of
+                        <mark class="highlight-red"><strong>TRIPS</strong></mark>
+                        Agreement.
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>What are the protections available to geographical indicators under TRIPS ?</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>DOHA Convention.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Berne Convention.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Paris Convention.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>TRIPS.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>WIPO</li>
+                </ol>
+                <hr />
+                <p></p>
+            </div>
+        </article>
+        <span class="sans" style="font-size: 14px; padding-top: 2em"></span>
+    <script defer src="../script.js"></script></body>
+</html>

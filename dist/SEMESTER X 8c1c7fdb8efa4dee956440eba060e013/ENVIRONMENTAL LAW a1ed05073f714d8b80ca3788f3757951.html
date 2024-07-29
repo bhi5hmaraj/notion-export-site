@@ -1,0 +1,1572 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ENVIRONMENTAL LAW</title>
+        <style>
+            /* cspell:disable-file */
+            /* webkit printing magic: print all background colors */
+            html {
+                -webkit-print-color-adjust: exact;
+            }
+            * {
+                box-sizing: border-box;
+                -webkit-print-color-adjust: exact;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            @media only screen {
+                body {
+                    margin: 2em auto;
+                    max-width: 900px;
+                    color: rgb(55, 53, 47);
+                }
+            }
+
+            body {
+                line-height: 1.5;
+                white-space: pre-wrap;
+            }
+
+            a,
+            a.visited {
+                color: inherit;
+                text-decoration: underline;
+            }
+
+            .pdf-relative-link-path {
+                font-size: 80%;
+                color: #444;
+            }
+
+            h1,
+            h2,
+            h3 {
+                letter-spacing: -0.01em;
+                line-height: 1.2;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 0.75em;
+            }
+
+            h1 {
+                font-size: 1.875rem;
+                margin-top: 1.875rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                margin-top: 1.25rem;
+            }
+
+            .source {
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                padding: 1.5em;
+                word-break: break-all;
+            }
+
+            .callout {
+                border-radius: 3px;
+                padding: 1rem;
+            }
+
+            figure {
+                margin: 1.25em 0;
+                page-break-inside: avoid;
+            }
+
+            figcaption {
+                opacity: 0.5;
+                font-size: 85%;
+                margin-top: 0.5em;
+            }
+
+            mark {
+                background-color: transparent;
+            }
+
+            .indented {
+                padding-left: 1.5em;
+            }
+
+            hr {
+                background: transparent;
+                display: block;
+                width: 100%;
+                height: 1px;
+                visibility: visible;
+                border: none;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            @media only print {
+                img {
+                    max-height: 100vh;
+                    object-fit: contain;
+                }
+            }
+
+            @page {
+                margin: 1in;
+            }
+
+            .collection-content {
+                font-size: 0.875rem;
+            }
+
+            .column-list {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .column {
+                padding: 0 1em;
+            }
+
+            .column:first-child {
+                padding-left: 0;
+            }
+
+            .column:last-child {
+                padding-right: 0;
+            }
+
+            .table_of_contents-item {
+                display: block;
+                font-size: 0.875rem;
+                line-height: 1.3;
+                padding: 0.125rem;
+            }
+
+            .table_of_contents-indent-1 {
+                margin-left: 1.5rem;
+            }
+
+            .table_of_contents-indent-2 {
+                margin-left: 3rem;
+            }
+
+            .table_of_contents-indent-3 {
+                margin-left: 4.5rem;
+            }
+
+            .table_of_contents-link {
+                text-decoration: none;
+                opacity: 0.7;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid rgba(55, 53, 47, 0.09);
+                border-collapse: collapse;
+            }
+
+            table {
+                border-left: none;
+                border-right: none;
+            }
+
+            th,
+            td {
+                font-weight: normal;
+                padding: 0.25em 0.5em;
+                line-height: 1.5;
+                min-height: 1.5em;
+                text-align: left;
+            }
+
+            th {
+                color: rgba(55, 53, 47, 0.6);
+            }
+
+            ol,
+            ul {
+                margin: 0;
+                margin-block-start: 0.6em;
+                margin-block-end: 0.6em;
+            }
+
+            li > ol:first-child,
+            li > ul:first-child {
+                margin-block-start: 0.6em;
+            }
+
+            ul > li {
+                list-style: disc;
+            }
+
+            ul.to-do-list {
+                padding-inline-start: 0;
+            }
+
+            ul.to-do-list > li {
+                list-style: none;
+            }
+
+            .to-do-children-checked {
+                text-decoration: line-through;
+                opacity: 0.375;
+            }
+
+            ul.toggle > li {
+                list-style: none;
+            }
+
+            ul {
+                padding-inline-start: 1.7em;
+            }
+
+            ul > li {
+                padding-left: 0.1em;
+            }
+
+            ol {
+                padding-inline-start: 1.6em;
+            }
+
+            ol > li {
+                padding-left: 0.2em;
+            }
+
+            .mono ol {
+                padding-inline-start: 2em;
+            }
+
+            .mono ol > li {
+                text-indent: -0.4em;
+            }
+
+            .toggle {
+                padding-inline-start: 0em;
+                list-style-type: none;
+            }
+
+            /* Indent toggle children */
+            .toggle > li > details {
+                padding-left: 1.7em;
+            }
+
+            .toggle > li > details > summary {
+                margin-left: -1.1em;
+            }
+
+            .selected-value {
+                display: inline-block;
+                padding: 0 0.5em;
+                background: rgba(206, 205, 202, 0.5);
+                border-radius: 3px;
+                margin-right: 0.5em;
+                margin-top: 0.3em;
+                margin-bottom: 0.3em;
+                white-space: nowrap;
+            }
+
+            .collection-title {
+                display: inline-block;
+                margin-right: 1em;
+            }
+
+            .page-description {
+                margin-bottom: 2em;
+            }
+
+            .simple-table {
+                margin-top: 1em;
+                font-size: 0.875rem;
+                empty-cells: show;
+            }
+            .simple-table td {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table th {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table-header-color {
+                background: rgb(247, 246, 243);
+                color: black;
+            }
+            .simple-table-header {
+                font-weight: 500;
+            }
+
+            time {
+                opacity: 0.5;
+            }
+
+            .icon {
+                display: inline-block;
+                max-width: 1.2em;
+                max-height: 1.2em;
+                text-decoration: none;
+                vertical-align: text-bottom;
+                margin-right: 0.5em;
+            }
+
+            img.icon {
+                border-radius: 3px;
+            }
+
+            .user-icon {
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 100%;
+                margin-right: 0.5rem;
+            }
+
+            .user-icon-inner {
+                font-size: 0.8em;
+            }
+
+            .text-icon {
+                border: 1px solid #000;
+                text-align: center;
+            }
+
+            .page-cover-image {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                max-height: 30vh;
+            }
+
+            .page-header-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .page-header-icon-with-cover {
+                margin-top: -0.72em;
+                margin-left: 0.07em;
+            }
+
+            .page-header-icon img {
+                border-radius: 3px;
+            }
+
+            .link-to-page {
+                margin: 1em 0;
+                padding: 0;
+                border: none;
+                font-weight: 500;
+            }
+
+            p > .user {
+                opacity: 0.5;
+            }
+
+            td > .user,
+            td > time {
+                white-space: nowrap;
+            }
+
+            input[type="checkbox"] {
+                transform: scale(1.5);
+                margin-right: 0.6em;
+                vertical-align: middle;
+            }
+
+            p {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
+            .image {
+                border: none;
+                margin: 1.5em 0;
+                padding: 0;
+                border-radius: 0;
+                text-align: center;
+            }
+
+            .code,
+            code {
+                background: rgba(135, 131, 120, 0.15);
+                border-radius: 3px;
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+                font-size: 85%;
+                tab-size: 2;
+            }
+
+            code {
+                color: #eb5757;
+            }
+
+            .code {
+                padding: 1.5em 1em;
+            }
+
+            .code-wrap {
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+
+            .code > code {
+                background: none;
+                padding: 0;
+                font-size: 100%;
+                color: inherit;
+            }
+
+            blockquote {
+                font-size: 1.25em;
+                margin: 1em 0;
+                padding-left: 1em;
+                border-left: 3px solid rgb(55, 53, 47);
+            }
+
+            .bookmark {
+                text-decoration: none;
+                max-height: 8em;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .bookmark-title {
+                font-size: 0.85em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 1.75em;
+                white-space: nowrap;
+            }
+
+            .bookmark-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bookmark-info {
+                flex: 4 1 180px;
+                padding: 12px 14px 14px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .bookmark-image {
+                width: 33%;
+                flex: 1 1 180px;
+                display: block;
+                position: relative;
+                object-fit: cover;
+                border-radius: 1px;
+            }
+
+            .bookmark-description {
+                color: rgba(55, 53, 47, 0.6);
+                font-size: 0.75em;
+                overflow: hidden;
+                max-height: 4.5em;
+                word-break: break-word;
+            }
+
+            .bookmark-href {
+                font-size: 0.75em;
+                margin-top: 0.25em;
+            }
+
+            .sans {
+                font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial,
+                    sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .code {
+                font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+            }
+            .serif {
+                font-family: Lyon-Text, Georgia, ui-serif, serif;
+            }
+            .mono {
+                font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+            }
+            .pdf .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK JP";
+            }
+            .pdf:lang(zh-CN) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK SC";
+            }
+            .pdf:lang(zh-TW) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK TC";
+            }
+            .pdf:lang(ko-KR) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+                    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji", "Noto Color Emoji", "Noto Sans CJK KR";
+            }
+            .pdf .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK KR";
+            }
+            .pdf .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK JP";
+            }
+            .pdf:lang(zh-CN) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK SC";
+            }
+            .pdf:lang(zh-TW) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK TC";
+            }
+            .pdf:lang(ko-KR) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK KR";
+            }
+            .pdf .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK KR";
+            }
+            .highlight-default {
+                color: rgba(55, 53, 47, 1);
+            }
+            .highlight-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .highlight-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .highlight-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .highlight-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .highlight-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .highlight-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .highlight-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .highlight-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .highlight-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .highlight-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .highlight-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .highlight-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .highlight-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .highlight-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .highlight-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .highlight-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .highlight-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .highlight-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .block-color-default {
+                color: inherit;
+                fill: inherit;
+            }
+            .block-color-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .block-color-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .block-color-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .block-color-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .block-color-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .block-color-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .block-color-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .block-color-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .block-color-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .block-color-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .block-color-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .block-color-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .block-color-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .block-color-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .block-color-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .block-color-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .block-color-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .block-color-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .select-value-color-uiBlue {
+                background-color: rgba(35, 131, 226, 0.07);
+            }
+            .select-value-color-pink {
+                background-color: rgba(245, 224, 233, 1);
+            }
+            .select-value-color-purple {
+                background-color: rgba(232, 222, 238, 1);
+            }
+            .select-value-color-green {
+                background-color: rgba(219, 237, 219, 1);
+            }
+            .select-value-color-gray {
+                background-color: rgba(227, 226, 224, 1);
+            }
+            .select-value-color-transparentGray {
+                background-color: rgba(227, 226, 224, 0);
+            }
+            .select-value-color-translucentGray {
+                background-color: rgba(0, 0, 0, 0.06);
+            }
+            .select-value-color-orange {
+                background-color: rgba(250, 222, 201, 1);
+            }
+            .select-value-color-brown {
+                background-color: rgba(238, 224, 218, 1);
+            }
+            .select-value-color-red {
+                background-color: rgba(255, 226, 221, 1);
+            }
+            .select-value-color-yellow {
+                background-color: rgba(253, 236, 200, 1);
+            }
+            .select-value-color-blue {
+                background-color: rgba(211, 229, 239, 1);
+            }
+            .select-value-color-pageGlass {
+                background-color: undefined;
+            }
+            .select-value-color-washGlass {
+                background-color: undefined;
+            }
+
+            .checkbox {
+                display: inline-flex;
+                vertical-align: text-bottom;
+                width: 16;
+                height: 16;
+                background-size: 16px;
+                margin-left: 2px;
+                margin-right: 5px;
+            }
+
+            .checkbox-on {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+
+            .checkbox-off {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+
+            /* -------- notionBackup injection -------- */
+
+            body {
+                white-space: normal !important;
+            }
+
+            p {
+                min-height: 1em !important;
+            }
+
+            .code,
+            code {
+                font-size: 100% !important;
+            }
+
+            blockquote {
+                font-size: 100% !important;
+            }
+
+            .callout {
+                white-space: normal !important;
+            }
+            .callout div:has(span.icon) {
+                font-size: 100% !important;
+            }
+
+            .source:not(.bookmark) {
+                font-size: 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+        <article class="page sans">
+            <header>
+                <img
+                    class="page-cover-image"
+                    src="cache/photo-1570832764204-f209aa9cd28f72be9f2d-d5ff-470b-95c0-451e84466f76"
+                    style="object-position: center 28.169999999999995%" />
+                <div class="page-header-icon page-header-icon-with-cover">
+                    <img class="icon" src="cache/leaf_grayf1ecb246-90f1-4dc0-b08c-1e21b931b0a6.svg" />
+                </div>
+                <h1 class="page-title">ENVIRONMENTAL LAW</h1>
+                <p class="page-description"></p>
+                <table class="properties">
+                    <tbody>
+                        <tr class="property-row property-row-file">
+                            <th>
+                                <span class="icon property-icon">
+                                    <svg
+                                        role="graphics-symbol"
+                                        viewBox="0 0 16 16"
+                                        style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0"
+                                        class="typesFile">
+                                        <path
+                                            d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path>
+                                    </svg>
+                                </span>
+                                Syllabus
+                            </th>
+                            <td>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/Environmental_Law.pdf">Environmental Law.pdf</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="property-row property-row-text">
+                            <th>
+                                <span class="icon property-icon">
+                                    <svg
+                                        role="graphics-symbol"
+                                        viewBox="0 0 16 16"
+                                        style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0"
+                                        class="typesText">
+                                        <path
+                                            d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path>
+                                    </svg>
+                                </span>
+                                Reference Book
+                            </th>
+                            <td>
+                                <em>
+                                    1. P Leelakrishnan, Environmental Law in India, 5th Edition, 2019.
+                                    <br />
+                                    2. C Shastri, Environmental Law, 4th Edition, 2012.
+                                    <br />
+                                    <br />
+                                </em>
+                            </td>
+                        </tr>
+                        <tr class="property-row property-row-file">
+                            <th>
+                                <span class="icon property-icon">
+                                    <svg
+                                        role="graphics-symbol"
+                                        viewBox="0 0 16 16"
+                                        style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0"
+                                        class="typesFile">
+                                        <path
+                                            d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path>
+                                    </svg>
+                                </span>
+                                Legislations, Rules and Reports
+                            </th>
+                            <td>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/WaterAct-1974.pdf">WaterAct-1974.pdf</a>
+                                </span>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/AirAct-1981.pdf">AirAct-1981.pdf</a>
+                                </span>
+                                <span style="margin-right: 6px">
+                                    <a
+                                        href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/The_Noise_Pollution_(Regulation_and_Control)_Rules_2000.pdf">
+                                        The Noise Pollution (Regulation and Control) Rules, 2000.pdf
+                                    </a>
+                                </span>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/Wildlife_Protection_Act_1972.pdf">
+                                        Wildlife Protection Act, 1972.pdf
+                                    </a>
+                                </span>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/ForestProtectionAct_1980.pdf">
+                                        ForestProtectionAct_1980.pdf
+                                    </a>
+                                </span>
+                                <span style="margin-right: 6px">
+                                    <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/ep_act_1986.pdf">ep_act_1986.pdf</a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </header>
+            <div class="page-body">
+                <h1>UNIT I - Idea of Environment</h1>
+                <figure>
+                    <div class="source">
+                        <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/CEENRG_WP_19_CustomaryInternationalLawandtheEnvironment.pdf">
+                            CEENRG_WP_19_CustomaryInternationalLawandtheEnvironment.pdf
+                        </a>
+                    </div>
+                </figure>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Define Environment. What are the
+                        <mark class="highlight-red"><strong>guiding principles of Environmental Ethics in Ancient lndia</strong></mark>
+                        ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>factors responsible</strong></mark>
+                        for environmental pollution and state the
+                        <mark class="highlight-red"><strong>remedies</strong></mark>
+                        .
+                        <br />
+                        (or)
+                        <br />
+                        Uncontrolled growth of population and economic development are the two main causes of environmental pollution. Substantiate.
+                        <br />
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Define the term 'pollution' and explain the different
+                        <mark class="highlight-red"><strong>kinds of pollution</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        What is meant by '
+                        <mark class="highlight-red"><strong>Global Warming</strong></mark>
+                        ' ? How does it affect environment ?
+                        <br />
+                        (or)
+                        <br />
+                        What is
+                        <br />
+                        <mark class="highlight-red"><strong>green house effect</strong></mark>
+                        ? Discuss the consequences of global warming.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        What is Ecosystem ? What are
+                        <mark class="highlight-red"><strong>ecosystem services</strong></mark>
+                        ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        State the laws relating to
+                        <mark class="highlight-red"><strong>control the various forms</strong></mark>
+                        of environmental pollution in lndia.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Critically analyse the
+                        <mark class="highlight-red"><strong>theory of inter-generational equity</strong></mark>
+                        with the help of decided cases.
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>Write a note on environmental ethics in ancient times.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Write a note on global warming.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Ecosystem service.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Green House Effect.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <hr />
+                <h1>UNIT II - Environmental Policy and Law</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Discuss the rule of '
+                        <mark class="highlight-red"><strong>Absolute Liability</strong></mark>
+                        ' with the help of decided cases.
+                        <mark class="highlight-red"><strong>5x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Discuss the environmental dimensions of
+                        <mark class="highlight-red"><strong>Article 21</strong></mark>
+                        of the lndian Constitution with the help of decided cases.
+                        <p>(or)</p>
+                        <p>
+                            Critically analyse the
+                            <mark class="highlight-red"><strong>fundamental right to live in a healthy environment</strong></mark>
+                            with the help of decided cases. 4x
+                        </p>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Examine the
+                        <mark class="highlight-red"><strong>Constitutional obligation</strong></mark>
+                        of the State to protect the natural environment.
+                        <br />
+                        (or)
+                        <br />
+                        What are the
+                        <br />
+                        <mark class="highlight-red"><strong>different provisions of the Constitution</strong></mark>
+                        concerning the Protection of Environment ?
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        Discuss
+                        <mark class="highlight-red"><strong>'Polluter Pays' principle</strong></mark>
+                        with the help of decided cases.
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Explain the significant
+                        <mark class="highlight-red"><strong>role of Supreme Court</strong></mark>
+                        of India in protection of environment in lndia.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Explain the Genesis of '
+                        <mark class="highlight-red"><strong>Precautionary principle</strong></mark>
+                        ' in protection of Environment.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Discuss the
+                        <mark class="highlight-red"><strong>History</strong></mark>
+                        of Environment Protection in lndia.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>
+                        Discuss the environmental protection during the
+                        <mark class="highlight-red"><strong>post lndependence era</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="9">
+                    <li>
+                        Explain in brief, the
+                        <mark class="highlight-red"><strong>different doctrines</strong></mark>
+                        evolved for the protection of environment.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="10">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>remedies available under tort law</strong></mark>
+                        to an individual against pollution of environment?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="11">
+                    <li>
+                        State the
+                        <mark class="highlight-red"><strong>Public Interest Litigation in respect of Noise pollution</strong></mark>
+                        with the help of leading cases.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="12">
+                    <li>
+                        Write the
+                        <mark class="highlight-red"><strong>pre-independence history of forest policy</strong></mark>
+                        and legislation in India.
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>Public trust doctrine. 2x</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Polluter pays principle. 2x</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Absolute liability.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Right to clean and healthy environment.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>Genisis of precautionary principle.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>Public lnterest Litigation and Noise Pollution’</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        A municipal corporation issued a licence for construction of buildings on some municipal sites. A petitioner suspecting irregularity in
+                        issual of licence, applied for the copy of building plan and proceeding to grant licence, under the constitutional provisions. Advise.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Ramdurga city corporation has not cleaned the city and bad sanitary condition prevailed in the city. The reason given by the Corporation
+                        is poor finance and poor city of staff. The city civilians affected by unhygienic condition in the city. Advise the civilians to protect
+                        their rights.
+                    </li>
+                </ol>
+                <ul class="toggle">
+                    <li>
+                        <details open="">
+                            <summary>
+                                The Government of Karnataka proposed a scheme to deport the pavement and slum dwellers from major cities in the State with the
+                                idea to improve environment. what is the constitutional remedy available to the slum dwellers ?
+                            </summary>
+                            <p>Olga Tellis v. Bombay Municipal Corporation - Shastri pg. 57</p>
+                            <ul class="toggle">
+                                <li>
+                                    <details open="">
+                                        <summary>
+                                            The emissions generated by the hazardous industries in and around the famous monument Taj Mahal are causing damage
+                                            to the Taj and people living around raj. one Mr. 'X'wants to file public interest litigation. Advise.
+                                        </summary>
+                                        <p>M.C Mehta vs Union of India (Taj Trapezium case) - pg. 63</p>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Span Motels built a resort on the bank of the Beas'river. During Monsoons, the river engulfed part of the lanh and threatened the
+                        resort. ln an effoft to protect its property, both before and after the floods, Span Motels carried out substantialwork to deflect the
+                        flow of the river. 'X' wants to file a public interest litigation against Span Motels. Advise.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        The State of "Chanakyapura did not protecting the endangered animars and taking plea of did not have enough money to rescue the
+                        endangered animals. Whether the State can take the plea and what is the duty of the State under the Constitution ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        A rubber industry was situated in the industrial estate and was given licence under Panchayaths and department of industry. The industry
+                        using carbon black in huge quantities, polluted the atmosphere and failed to apply the preventive measures resulted in discomforts,
+                        injury and nuisance to the resident of the locality. Suggest remedies available under tort law.
+                    </li>
+                </ol>
+                <hr />
+                <h1>UNIT III - International Law &amp; Environmental Protection</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Why
+                        <mark class="highlight-red"><strong>Rio Summit</strong></mark>
+                        is considered an important mirestone in establishing linkages between environment and development in defining the concept of sustainable
+                        development?
+                        <br />
+                        (or)
+                        <br />
+                        Discuss the significance of Rio-Summit and its
+                        <br />
+                        <mark class="highlight-red"><strong>principles</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>4x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        What is
+                        <mark class="highlight-red"><strong>sustainable development</strong></mark>
+                        ? Explain the role of courts in this regard.
+                        <br />
+                        (or)
+                        <br />
+                        Explain the sustainable development principle.
+                        <br />
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                        <mark class="highlight-red"><strong>- pg. 254, Leelakrishnan</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        What is
+                        <mark class="highlight-red"><strong>public nuisance</strong></mark>
+                        ? Explain the provisions of
+                        <mark class="highlight-red"><strong>criminal law relating to the abatement</strong></mark>
+                        of public nuisance.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        State the impact of '
+                        <mark class="highlight-red"><strong>Stockholm declaration</strong></mark>
+                        ' of 1972 on lndia for the protection of Human Environment.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>Explain the remedies provided under criminal law to control environmental pollution.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>Briefly explain the common law concepts to check environmental pollution.</li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>Stockholm Declaration ol 1972</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Earth Summit 1992.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Transboundary pollution.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Mr. John constructed a new baking oven with 12 feet chimney. His neighbour Ramesh filed an injunction petition to restrain the opening
+                        of it fearing that it would cause nuisance when bakery commenced. Will he succeed ?
+                        <br />
+                        (or)
+                        <br />
+                        A baking unit belonging to John had a chimney with some holes facing Shyam's properly. Shyam went to court asking for a permanent
+                        prohibitory injunction stating that in future the smoke and smell would cause him a lot of nuisance. Can he get the injunction ?
+                        <br />
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        A famous municipal corporation failed to provide effective drainage system in some areas of its jurisdiction, as a result of which waste
+                        water accumulated on the streets and provided place for mosquito breeding. Suggest appropriate Constitutional remedy to solve this
+                        problem.
+                    </li>
+                </ol>
+                <hr />
+                <h1>UNIT IV - Water, Air &amp; Noise Pollution, Wildlife Protection Act &amp; Forest Conservation Act</h1>
+                <details open="">
+                    <summary style="font-weight: 600; font-size: 1.25em; line-height: 1.3; margin: 0">Legislations</summary>
+                    <div class="indented">
+                        <figure>
+                            <div class="source">
+                                <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/AirAct-1981%201.pdf">AirAct-1981%201.pdf</a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="source">
+                                <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/WaterAct-1974%201.pdf">WaterAct-1974%201.pdf</a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="source">
+                                <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/Wildlife_Protection_Act_1972%201.pdf">
+                                    Wildlife_Protection_Act_1972%201.pdf
+                                </a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="source">
+                                <a href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/ForestProtectionAct_1980%201.pdf">
+                                    ForestProtectionAct_1980%201.pdf
+                                </a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="source">
+                                <a
+                                    href="ENVIRONMENTAL%20LAW%20a1ed05073f714d8b80ca3788f3757951/The_Noise_Pollution_(Regulation_and_Control)_Rules_2000%201.pdf">
+                                    The_Noise_Pollution_(Regulation_and_Control)_Rules_2000%201.pdf
+                                </a>
+                            </div>
+                        </figure>
+                        <p></p>
+                    </div>
+                </details>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Discuss the
+                        <mark class="highlight-red"><strong>constitution,powers and functions</strong></mark>
+                        of the
+                        <mark class="highlight-red"><strong>Central Pollution Control Board</strong></mark>
+                        under the Water Act.
+                        <mark class="highlight-red"><strong>6x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Discuss the judicial response of
+                        <mark class="highlight-red"><strong>conservation of forest resources</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>salient features of Forest (Conservation) Act</strong></mark>
+                        , 1980.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        Define
+                        <mark class="highlight-red"><strong>'Air pollution</strong></mark>
+                        '. Explain how lndian Judiciary dealt with
+                        <mark class="highlight-red"><strong>sound pollution problem</strong></mark>
+                        .
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        State the powers and functions ol the
+                        <mark class="highlight-red"><strong>Central and State Boards</strong></mark>
+                        under the
+                        <mark class="highlight-red"><strong>Air Act, 1981</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        What measures have been taken to protect our wildlife under the
+                        <mark class="highlight-red"><strong>Wildlife Protection Act, 1972</strong></mark>
+                        ? How far are these measures effective ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Explain the framework of the Water (Prevention and Control of Pollution) Act, 1974. Discuss the identified sources of water pollution.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>
+                        Explain the cruelties against animal as defined in
+                        <mark class="highlight-red"><strong>Prevention of Cruelty to Animals Act, 1960</strong></mark>
+                        . Are there any exceptions to the definition.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="9">
+                    <li>Define noise pollution. Explain how lndian Judiciary dealt with sound problem.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="10">
+                    <li>Explain the Constitutional remedies to check and control pollution.</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="11">
+                    <li>State the laws relating to Noise pollution control in lndia.</li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Protected areas.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Air pollution.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Noise Pollution.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>Wildlife Protection Act, 1972.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        A Fodder cutting machine was installed in a residential locality. The wind carried particles of fodder causing noise and offensive smell
+                        creating public nuisance. 'M' a resident of that locality approaches you. Advise him.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        A built a brick grinding machine close to a doctor's ctinic. The machine generated a lot of noise and dust which polluted the entire
+                        area and the doctor's practice suffered seriously as patients stopped visiting him. Advise the doctor. 2x
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        Mr. 'X' had setup an eleclric fence unauthorisedly on his agricultural land to prevent the encroachment of wild animals. An elephant
+                        died as a result of electric shock on the said field. Examine the liability of Mr. X.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        X's house is located very near to Roman Catholic Church and because of continuous ringing of church bell 'X' wants to take an action
+                        under nuisance. Advise.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        During Diwali festival high sounding fire crackers were being used. Ramanand, a civilian claimed it wiil affect on health of peopre,
+                        hence seek the direction of the court not manufacture fire crackers. But fire crackers manufacturers claimed it as their right to
+                        manufacture and trade with fire crackers. Decide.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Tannery and other industries were set up in the State of Karnataka. These industries discharged on enormous untreated effluents into the
+                        river. As a result of this, water of river polluted and agricultural land became totally unfit for cultivation. What kind of remedy
+                        would you suggest under criminal law ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Maheshwar Temple built by a marble stone, a prestigious temple in Pataliputra city is affected by coal based industries situated in and
+                        around the temple,
+                        <br />
+                        by discharging sulfur-dioxide into the air, what kind of remedy would you suggest under the law ?
+                        <br />
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="8">
+                    <li>
+                        ln Shivanagar hilly areas unbridled mining activity cause damage to the natural streams and polluted the streams' It caused water unfit
+                        for drinking and agricultural purpose. The people of Shivanagar are affected by this mining activity. Advise them.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="9">
+                    <li>
+                        lmpala lndustry was working for a long time without proper consent order. The activity of the industry is causing air, water and soil
+                        pollution. Hence court imposed 150 crores as fine on the industry. Whether the award of damage stands in accordance with law ? State the
+                        principle applicable to it.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="10">
+                    <li>
+                        Karnataka Government leased a piece of land on the bank of river Bhadra, to build a resort, which happens to be protected forest. The
+                        resort proprietor to save his leased property from water current, constructed a concrete wall along river bank, which made the river
+                        flow to swing to the other bank of the river washing away substantial part of the land where horticulturalcrops were grown. Now farmers
+                        filed a PIL questioning the validity of lease granted in favour of hotelier. What shall be the ground for petition ?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="11">
+                    <li>
+                        X is in possession of snake skins and crocodile skins which he wants to export. He does not have a valid licence to possess and sell
+                        them. Under which provisions of law is he guilty ? Decide.
+                    </li>
+                </ol>
+                <hr />
+                <h1>UNIT V - Environment Protection Act, 1986</h1>
+                <h3>Essay Type</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Explain the
+                        <mark class="highlight-red"><strong>salient features</strong></mark>
+                        of Environmental Protection Act, 1986.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Explain the provisions relating to
+                        <mark class="highlight-red"><strong>prevention, control and abatement</strong></mark>
+                        of environmental pollution under the Environment Protection Act of 1986.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>
+                        What are the
+                        <mark class="highlight-red"><strong>powers of Central Government</strong></mark>
+                        to protect and improve environment under the Environmental Protection Act, 1986.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="4">
+                    <li>
+                        State the
+                        <mark class="highlight-red"><strong>punishment and penalty</strong></mark>
+                        for the violation and non-compliance of the provisions of the Environmental Protection Act, 1986.
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="5">
+                    <li>
+                        Explain
+                        <mark class="highlight-red"><strong>'occupier', 'Hazardous substance, and ,Handling</strong></mark>
+                        , as defined under Environment protection Act, 1986
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="6">
+                    <li>
+                        Explain the regulations on disposal of
+                        <mark class="highlight-red"><strong>bio-medical waste</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="7">
+                    <li>
+                        Explain the provisions and procedure of
+                        <mark class="highlight-red"><strong>collection of sample</strong></mark>
+                        .
+                    </li>
+                </ol>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Environment Impact Assessment.
+                        <mark class="highlight-red"><strong>3x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Eco Mark Scheme.
+                        <mark class="highlight-red"><strong>2x</strong></mark>
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Environmental Audit.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        The District Authority of Kamala Nagarcity allotted the pond’s land for residentiat purpose. This was questioned on the reason, it will
+                        cause ecological imbalance and affected the life of the people to live in unhealthy environment. Whether the action of the District
+                        Authority is justifiable?
+                    </li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>
+                        Shankar lndustry is cultivating shrimp culture in coastal area of Mandya causing salinity of soiland drinking water and also causing
+                        effect on the local flora and fauna.
+                        <br />
+                        Suggest the remedies available under the law.
+                        <br />
+                    </li>
+                </ol>
+                <hr />
+                <h1>Uncategorized Questions</h1>
+                <h3>Essay Type</h3>
+                <p></p>
+                <h3>Short Note</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>Class action</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="2">
+                    <li>Bio-diversity</li>
+                </ol>
+                <ol type="1" class="numbered-list" start="3">
+                    <li>Offences by Government Departments.</li>
+                </ol>
+                <h3>Problem Questions</h3>
+                <ol type="1" class="numbered-list" start="1">
+                    <li>
+                        Dharwad Sugar factory used to store molasses, a by-product in manufacturing sugar, in a mud tank located close to Mr. John's land. Due
+                        to burrowing activity of rodents the ' said tank containing 8000 tons of molasses collapsed and emptied themselves on Mr. John's land
+                        damaging standing crop of paddy and sugarcane. Mr. John claims compensation by filing a petition before competent court. Will he succeed
+                        ? Give reasons.
+                    </li>
+                </ol>
+                <hr />
+                <p>Note: new pattern - Sept/Oct 2023(June 2023)</p>
+                <p></p>
+            </div>
+        </article>
+        <span class="sans" style="font-size: 14px; padding-top: 2em"></span>
+    <script defer src="../script.js"></script></body>
+</html>
