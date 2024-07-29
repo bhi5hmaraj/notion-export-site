@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const fs = require('fs');
 
-// Function to get all HTML files recursively
 function getHtmlFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   files.forEach(file => {
@@ -21,9 +20,12 @@ function getHtmlFiles(dir, fileList = []) {
 const htmlFiles = getHtmlFiles(path.resolve(__dirname, 'src'));
 
 module.exports = {
-  entry: './src/script.js',
+  entry: {
+    auth: './src/auth-check.js',
+    login: './src/login.js',
+  },
   output: {
-    filename: 'script.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -35,26 +37,45 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env', '@babel/preset-typescript']
           }
         }
-      }
+      }, 
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ]
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: 'common',
+    },
+  },
   plugins: [
-    ...htmlFiles.map(htmlFile => new HtmlWebpackPlugin({
-      template: htmlFile,
-      filename: path.relative(path.join(__dirname, 'src'), htmlFile),
-      inject: 'body',
-      minify: false
-    })),
+    ...htmlFiles.map(htmlFile => {
+      const filename = path.relative(path.join(__dirname, 'src'), htmlFile);
+      const chunks = filename === 'index.html' ? ['login', 'common'] : ['auth', 'common'];
+      return new HtmlWebpackPlugin({
+        template: htmlFile,
+        filename: filename,
+        chunks: chunks,
+        inject: 'body',
+        minify: false
+      });
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { 
           from: 'src',
-          to: '',  
+          to: 'dist',
           globOptions: {
-            ignore: ['**/script.js', '**/*.html'],
+            ignore: ['**/*.js', '**/*.html'],
           },
         },
       ],

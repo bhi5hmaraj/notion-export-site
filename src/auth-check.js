@@ -1,9 +1,10 @@
 import {analytics, auth} from './init.js'
+import { onAuthStateChanged } from "firebase/auth"
 
 // Function to check authentication state
 function checkAuth() {
     return new Promise((resolve, reject) => {
-      onAuthStateChanged(auth, (user) => {
+        onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in
           resolve(user);
@@ -17,11 +18,14 @@ function checkAuth() {
   
   // Function to protect pages
   function protectPage() {
+
+  document.body.style.visibility = 'hidden';
     checkAuth()
       .then((user) => {
         // User is authenticated, allow access to the page
         console.log('User authenticated:', user.email);
         // Here you can initialize your page content
+        document.body.style.visibility = 'visible';
       })
       .catch((error) => {
         // User is not authenticated, redirect to login page
